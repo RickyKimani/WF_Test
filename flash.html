@@ -1,28 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="utf-8" />
+    <title>ESP Web Tools</title>
+    <!-- <meta
+      name="description"
+      content="Easily allow users to flash new firmware for their ESP-devices on the web."
+    />
+    <meta name="viewport" content="width=device-width" />
 
-    <title>WF Test</title>
-  </head>
-  <body>
-    <h1>ESP-Web-Tool-Test</h1>
+    <meta property="og:title" content="ESP Web Tools" />
+    <meta property="og:site_name" content="ESP Web Tools" />
+    <meta
+      property="og:url"
+      content="https://esphome.github.io/esp-web-tools/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Easily allow users to flash new firmware for their ESP-devices on the web."
+    />
+    <meta
+      property="og:image"
+      content="https://esphome.github.io/esp-web-tools/static/social.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ESP Web Tools" />
+    <meta
+      name="twitter:description"
+      content="Easily allow users to flash new firmware for their ESP-devices on the web."
+    />
+    <meta
+      name="twitter:image"
+      content="https://esphome.github.io/esp-web-tools/static/social.png"
+    />
+    <meta name="color-scheme" content="dark light" /> -->
+    <style>
+      body {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu, sans-serif;
+        padding: 0;
+        margin: 0;
+        line-height: 1.4;
+      }
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 12px;
+      }
+      h2 {
+        margin-top: 2em;
+      }
+      h3 {
+        margin-top: 1.5em;
+      }
+      .projects {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+      }
+      .projects a {
+        color: initial;
+        text-decoration: none;
+      }
+      .project .logo img {
+        height: 50px;
+      }
+      .project .name {
+        margin-top: 8px;
+      }
+      a {
+        color: #03a9f4;
+      }
+      .screenshot {
+        text-align: center;
+      }
+      .screenshot img {
+        max-width: 100%;
+        box-shadow:
+          rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+          rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        border-radius: 4px;
+      }
+      .screenshot i {
+        margin-top: 4px;
+        display: block;
+      }
+      .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin-bottom: 25px;
+        background: #ccc;
+      }
+      .hidden {
+        display: none;
+      }
+      .content pre {
+        display: block;
+        padding-left: 8px;
+        overflow-y: scroll;
+      }
+      .footer {
+        margin-top: 24px;
+        border-top: 1px solid #ccc;
+        padding-top: 24px;
+        text-align: center;
+      }
+      .footer .initiative {
+        font-style: italic;
+        margin-top: 16px;
+      }
+      table {
+        border-spacing: 0;
+      }
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #333;
+          color: #fff;
+        }
+        a {
+          color: #58a6ff;
+        }
+      }
+    </style>
     <script
       type="module"
       src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"
     ></script>
-    <div id="esp-web-tool-widget">
-      <esp-web-install-button id="esp-web" manifest="test/manifest.json">
-        <button id="flash-button" slot="acivate">🔌FLASH🔌</button>
-        <span slot="unsupported"
-          >Ah snap, your browser does not support WebSerial API! If you are
-          using a mobile browser, this is expected. Please, move to the desktop
-          version.</span
-        >
-        <span slot="not-allowed"
-          >Ah snap, you are not allowed to use this on HTTP!</span
-        >
+  </head>
+  <body>
+    <div class="content">
+      <h1>ESP Web Tools</h1>
+      <ul>
+        <li>Install &amp; update firmware</li>
+        <li>Connect device to the Wi-Fi network</li>
+        <li>Visit the device's hosted web interface</li>
+        <li>Access logs and send terminal commands</li>
+        
+      </ul>
+      
+
+      <esp-web-install-button
+        manifest="test/manifest.json"
+      >
+        <i slot="unsupported">
+          The demo is not available because your browser does not support Web
+          Serial. Open this page in Google Chrome or Microsoft Edge instead<span
+            class="not-supported-i hidden"
+          >
+            (but not on your iOS device)</span
+          >.
+        </i>
       </esp-web-install-button>
-    </div>
-  </body>
-</html>

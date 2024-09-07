@@ -1,40 +1,7 @@
-<!doctype html>
-<html>
+
   <head>
     <meta charset="utf-8" />
-    <title>ESP Web Tools</title>
-    <!-- <meta
-      name="description"
-      content="Easily allow users to flash new firmware for their ESP-devices on the web."
-    />
-    <meta name="viewport" content="width=device-width" />
-
-    <meta property="og:title" content="ESP Web Tools" />
-    <meta property="og:site_name" content="ESP Web Tools" />
-    <meta
-      property="og:url"
-      content="https://esphome.github.io/esp-web-tools/"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:description"
-      content="Easily allow users to flash new firmware for their ESP-devices on the web."
-    />
-    <meta
-      property="og:image"
-      content="https://esphome.github.io/esp-web-tools/static/social.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ESP Web Tools" />
-    <meta
-      name="twitter:description"
-      content="Easily allow users to flash new firmware for their ESP-devices on the web."
-    />
-    <meta
-      name="twitter:image"
-      content="https://esphome.github.io/esp-web-tools/static/social.png"
-    />
-    <meta name="color-scheme" content="dark light" /> -->
+    <title>Web Flash Webpage</title>
     <style>
       body {
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
@@ -139,13 +106,6 @@
   <body>
     <div class="content">
       <h1>ESP Web Tools</h1>
-      <ul>
-        <li>Install &amp; update firmware</li>
-        <li>Connect device to the Wi-Fi network</li>
-        <li>Visit the device's hosted web interface</li>
-        <li>Access logs and send terminal commands</li>
-        
-      </ul>
       
 
       <esp-web-install-button

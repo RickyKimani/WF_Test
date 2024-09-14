@@ -6,7 +6,7 @@
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "customThemes/commons/bootloader.bin", 
+        { "path": "../customThemes/commons/bootloader.bin", 
           "offset": 4096 },
         
         { "path": "../customThemes/commons/partitions.bin", 
